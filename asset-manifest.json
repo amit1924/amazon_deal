@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/amazon_deal/static/css/main.eb12fd1f.css",
+    "main.js": "/amazon_deal/static/js/main.bb2d078b.js",
+    "index.html": "/amazon_deal/index.html",
+    "main.eb12fd1f.css.map": "/amazon_deal/static/css/main.eb12fd1f.css.map",
+    "main.bb2d078b.js.map": "/amazon_deal/static/js/main.bb2d078b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.eb12fd1f.css",
+    "static/js/main.bb2d078b.js"
+  ]
+}
