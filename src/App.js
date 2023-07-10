@@ -7,6 +7,20 @@ app.use(cors());
 const username = "amish198";
 const password = "Unique#108";
 
+const corsOptions = {
+  origin: function (origin, callback) {
+    const userAgent = req.headers['user-agent'];
+
+    // Check if the request is coming from your smartphone
+    if (userAgent && /Android 10;/.test(userAgent) && /Mobile Safari\/537\.36/.test(userAgent)) {
+  callback(null, true); // Allow the request
+} else {
+  callback(new Error('Not allowed by CORS')); // Reject the request
+}
+
+  },
+};
+
 app.get('/deals', async (req, res) => {
   try {
     const body = {
