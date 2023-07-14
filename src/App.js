@@ -1,5 +1,6 @@
 const express = require('express');
 const cors = require('cors');
+const fetch = require('node-fetch');
 const app = express();
 
 app.use(cors());
@@ -13,15 +14,14 @@ const corsOptions = {
 
     // Check if the request is coming from your smartphone
     if (userAgent && /Android 10;/.test(userAgent) && /Mobile Safari\/537\.36/.test(userAgent)) {
-  callback(null, true); // Allow the request
-} else {
-  callback(new Error('Not allowed by CORS')); // Reject the request
-}
-
+      callback(null, true); // Allow the request
+    } else {
+      callback(new Error('Not allowed by CORS')); // Reject the request
+    }
   },
 };
 
-app.get('/deals', async (req, res) => {
+app.get('/deals', cors(corsOptions), async (req, res) => {
   try {
     const body = {
       "source": "amazon_search",
