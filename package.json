@@ -1,5 +1,6 @@
 {
   "name": "my-app",
+  "homepage": "https://amit1924.github.io/amazon_deal",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -9,6 +10,7 @@
     "cors": "^2.8.5",
     "dotenv": "^16.3.1",
     "express": "^4.18.2",
+    "gh-pages": "^5.0.0",
     "node-fetch": "^3.3.1",
     "nodemon": "^3.0.1",
     "react": "^18.2.0",
@@ -19,6 +21,8 @@
   "scripts": {
     "start:frontend": "react-scripts start",
     "start:backend": "nodemon server.js",
+    "predeploy": "npm run build",
+  "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

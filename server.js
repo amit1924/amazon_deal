@@ -17,7 +17,7 @@ app.get('/deals', async (req, res) => {
       "domain": "in",
       "query": "deals of the day",
       "parse": true,
-      "pages": 5
+      "pages": 20
     };
 
     const response = await fetch("https://realtime.oxylabs.io/v1/queries", {
